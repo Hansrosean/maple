@@ -41,13 +41,28 @@
                 Dashboard
             </a>
 
-            <a href="{{ route('profile.edit') }}" class="flex items-center px-6 py-3 hover:bg-[#aae1c6] transition">
+            <a href="{{ route('profile.edit') }}"
+                class="flex items-center px-6 py-3 transition hover:bg-[#aae1c6]
+                {{ request()->routeIs('profile.edit') ? 'bg-[#aae1c6]' : '' }}">
 
                 <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A9 9 0 1118 12" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.121 17.804A9 9 0 1118.879 17.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
 
                 Profile
+            </a>
+
+            <a href="{{ route('employee.index') }}"
+                class="flex items-center px-6 py-3 transition hover:bg-[#aae1c6]
+                {{ request()->routeIs('employee.index') ? 'bg-[#aae1c6]' : '' }}">
+
+                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 20h5v-1a4 4 0 00-5-3.87M9 20H4v-1a4 4 0 015-3.87m8-5.13a4 4 0 11-8 0 4 4 0 018 0zM5 7a4 4 0 118 0 4 4 0 01-8 0z" />
+                </svg>
+
+                Employee
             </a>
 
         </nav>

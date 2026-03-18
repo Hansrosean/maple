@@ -24,6 +24,11 @@ class Employee extends Model
         'position_id'
     ];
 
+    // set selalu 'ACTIVE' setiap data baru dibuat
+    protected $attributes = [
+        'employment_status' => 'Active',
+    ];
+
     protected $casts = [
         'birth_date' => 'date',
         'hire_date' => 'date'
